@@ -51,7 +51,7 @@ class Mainview: ObservableObject{
             self.last = mainuser.last
             self.phone = mainuser.phone
 //            self.errorMessage = mainuser.email
-            
+//            
 //            print(data)
         
     }

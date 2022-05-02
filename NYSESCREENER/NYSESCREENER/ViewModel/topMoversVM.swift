@@ -1,23 +1,22 @@
 //
-//  newsVM.swift
+//  topMoversVM.swift
 //  NYSESCREENER
 //
-//  Created by roshan polasa on 5/1/22.
+//  Created by roshan polasa on 5/2/22.
 //
 
 import Foundation
 
-
-class newsVM : ObservableObject{
+class topMoversVM : ObservableObject{
     
-    @Published var newsData = [newsModel]()
+    @Published var moversData = [topMoversModel]()
     @Published var fetching = false
     
     public init() {}
     
-    public func fetchNewsResults(tckr: String) async -> [newsModel]{
+    public func fetchNewsResults(type: String) async -> [topMoversModel]{
         
-        let url = URL(string:"https://api.tiingo.com/tiingo/news?tags=Tiingo+Top&limit=25&token=2f7e85db1869a38072f3348bdae03512c8438e30")
+        let url = URL(string:"https://financialmodelingprep.com/api/v3/stock_market/\(type)?apikey=f4d3c493d808c26a4d6f1e6ff87f7be8")
         
         guard url != nil else {
             print("Error creating url object")
@@ -39,8 +38,8 @@ class newsVM : ObservableObject{
                 return []
             }
             
-            let newsdata = try JSONDecoder().decode([newsModel].self, from: data)
-            return newsdata
+            let moversData = try JSONDecoder().decode([topMoversModel].self, from: data)
+            return moversData
         }
         catch {
             return []
@@ -51,8 +50,8 @@ class newsVM : ObservableObject{
     @MainActor
     func refresh(ticker: String) async {
         fetching = true
-        let result = await fetchNewsResults(tckr: ticker)
-        newsData = result
+        let result = await fetchNewsResults(type: ticker)
+        moversData = result
         fetching = false
     }
 }

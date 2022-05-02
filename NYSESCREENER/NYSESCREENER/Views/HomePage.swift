@@ -23,14 +23,14 @@ struct HomePage: View {
                     Text("\(vm.Email)")
                         .font(.system(size: 14, weight: .bold))
 
-                    HStack {
-                        Circle()
-                            .foregroundColor(.green)
-                            .frame(width: 8, height: 14)
-                        Text("online")
-                            .font(.system(size: 8))
-                            .foregroundColor(Color(.lightGray))
-                    }
+//                    HStack {
+//                        Circle()
+//                            .foregroundColor(.green)
+//                            .frame(width: 8, height: 14)
+//                        Text("online")
+//                            .font(.system(size: 8))
+//                            .foregroundColor(Color(.lightGray))
+//                    }
 
                 }
                 Spacer()
@@ -38,7 +38,7 @@ struct HomePage: View {
                     shouldShowLogOutOptions.toggle()
                 } label: {
                     Image(systemName: "power")
-                        .font(.system(size: 16, weight: .bold))
+                        .font(.system(size: 14, weight: .bold))
                         .foregroundColor(Color(.label))
                 }
             }
@@ -76,6 +76,21 @@ struct HomePage: View {
                             Settings().tabItem{
                                 Label("Settings",systemImage: "gear")
                                 
+                                }
+                            stockSearchView()
+                                .tabItem{
+                                    Label("Search", systemImage: "magnifyingglass")
+                                        .foregroundColor(Color.red)
+                                }
+                            
+                            topNewsView()
+                                .tabItem {
+                                    Label("Top News", systemImage: "newspaper.fill")
+                                }
+                            
+                            NewsSearchView()
+                                .tabItem {
+                                    Label("Search News", systemImage: "mail.and.text.magnifyingglass")
                                 }
                         }
 

@@ -6,7 +6,6 @@
 //
 
 
-
 import SwiftUI
 
 class stockDetailVM: ObservableObject {

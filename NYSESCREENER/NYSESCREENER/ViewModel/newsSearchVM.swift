@@ -1,24 +1,30 @@
+//
+//  newsSearchVM.swift
+//  NYSESCREENER
+//
+//  Created by roshan polasa on 5/2/22.
+//
 
-import SwiftUI
+import Foundation
 
-class stockListVM: ObservableObject {
+
+class newsSearchVM : ObservableObject{
     
-    @Published var stockData = [stockListModel]()
+    @Published var newsData = [newsModel]()
     @Published var fetching = false
     
     public init() {}
     
-    public func fetchStockPrice(tckr: String) async -> [stockListModel]{
+    public func fetchNewsResults(tckr: String) async -> [newsModel]{
         
-        let url = URL(string:"https://api.tiingo.com/iex/?tickers=\(tckr)&token=2f7e85db1869a38072f3348bdae03512c8438e30")
-
+        let url = URL(string:"https://api.tiingo.com/tiingo/news?tickers=\(tckr)&tags=Tiingo+Top&limit=25&token=2f7e85db1869a38072f3348bdae03512c8438e30")
         
         guard url != nil else {
             print("Error creating url object")
             return []
         }
         //URL Request
-        var request = URLRequest(url: url!, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
+        var request = URLRequest(url: url!, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 30.0)
         let headers = [
             "Content-Type": "application/json"
         ]
@@ -32,12 +38,11 @@ class stockListVM: ObservableObject {
                 print("URL response error")
                 return []
             }
-//            print(data)
-            let newsdata = try JSONDecoder().decode([stockListModel].self, from: data)
+            
+            let newsdata = try JSONDecoder().decode([newsModel].self, from: data)
             return newsdata
         }
         catch {
-            print("error")
             return []
         }
         
@@ -46,10 +51,8 @@ class stockListVM: ObservableObject {
     @MainActor
     func refresh(ticker: String) async {
         fetching = true
-        let result = await fetchStockPrice(tckr: ticker)
-        stockData = result
+        let result = await fetchNewsResults(tckr: ticker)
+        newsData = result
         fetching = false
-//        print(result)
     }
 }
-
