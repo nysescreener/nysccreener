@@ -47,10 +47,12 @@ struct LoginPage: View {
                             TextField("Last Name", text: $lastname)
                             TextField("Phone Number", text: $phonenumber)
                             
-                            }.padding(12)
-                                .background(Color.white)
+                            }.padding(12)  .overlay(
+                                RoundedRectangle(cornerRadius: 16)
+                                    .stroke(Color.blue, lineWidth: 4)
+                            )
+//                                .background(.white).foregroundColor(Color.black)
                         }
-
                         Group {
                             TextField("Email", text: $email)
                                 .keyboardType(.emailAddress)
@@ -58,8 +60,12 @@ struct LoginPage: View {
                             SecureField("Password", text: $password)
                             
                         }
-                        .padding(12)
-                        .background(Color.white)
+                        .padding(12)  .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(Color.blue, lineWidth: 4)
+                        )
+//                        .background(Color.white)
+//                        .foregroundColor(Color.black)
 
                         Button {
                             handleAction()

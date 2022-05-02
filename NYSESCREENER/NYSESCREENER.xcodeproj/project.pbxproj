@@ -17,6 +17,7 @@
 		F14DD6AB2818EC0C00E422DD /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14DD6AA2818EC0C00E422DD /* Stock.swift */; };
 		F150C8542805550B00F4C82B /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F150C8532805550B00F4C82B /* FirebaseManager.swift */; };
 		F150C85628055A4700F4C82B /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F150C85528055A4700F4C82B /* HomeVM.swift */; };
+		F15184CE28208F4800008765 /* emailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15184CD28208F4700008765 /* emailModel.swift */; };
 		F17AB2E428052A2700AD34B1 /* NYSESCREENERApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17AB2E328052A2700AD34B1 /* NYSESCREENERApp.swift */; };
 		F17AB2E628052A2700AD34B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17AB2E528052A2700AD34B1 /* ContentView.swift */; };
 		F17AB2E828052A2900AD34B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F17AB2E728052A2900AD34B1 /* Assets.xcassets */; };
@@ -77,6 +78,7 @@
 		F14DD6AA2818EC0C00E422DD /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 		F150C8532805550B00F4C82B /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		F150C85528055A4700F4C82B /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		F15184CD28208F4700008765 /* emailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emailModel.swift; sourceTree = "<group>"; };
 		F17AB2E028052A2700AD34B1 /* NYSESCREENER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYSESCREENER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F17AB2E328052A2700AD34B1 /* NYSESCREENERApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYSESCREENERApp.swift; sourceTree = "<group>"; };
 		F17AB2E528052A2700AD34B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				F1AC0D02281F5C6D002C845C /* stockListModel.swift */,
 				F1AC0D1B28206247002C845C /* stockSearchModel.swift */,
 				F1AC0D1D28206266002C845C /* topMoverModel.swift */,
+				F15184CD28208F4700008765 /* emailModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				F17AB31828053C6A00AD34B1 /* HomePage.swift in Sources */,
 				F14DD6AB2818EC0C00E422DD /* Stock.swift in Sources */,
 				F14DD6A92818EB4500E422DD /* APIManager.swift in Sources */,
+				F15184CE28208F4800008765 /* emailModel.swift in Sources */,
 				F14DD6A52817DADD00E422DD /* StockListVM.swift in Sources */,
 				F1AC0D1028204E16002C845C /* MainView.swift in Sources */,
 				F1AC0CFB281F5B91002C845C /* NewsSearchView.swift in Sources */,

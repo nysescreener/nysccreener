@@ -76,6 +76,7 @@ struct UpdateProfile: View {
             }
             
             self.Loginstatus1 = "Updated Profile"
+            showingAlert1 = true
         }
     }
     
@@ -83,8 +84,8 @@ struct UpdateProfile: View {
 
 
 
-//struct UpdateProfile_Previews: PreviewProvider {
-//    static var previews: some View {
-//        UpdateProfile(firstname: <#String#>, lastname: <#String#>, phonenumber: <#String#>, email: <#String#>)
-//    }
-//}
+struct UpdateProfile_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
