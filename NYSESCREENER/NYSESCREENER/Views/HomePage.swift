@@ -70,13 +70,10 @@ struct HomePage: View {
                                 Label("Stocks", systemImage: "chart.xyaxis.line")
                             }
         
-                            StockView().tabItem{
-                                Label("Stock Graphs",systemImage: "chart.pie")
-                            }
-                            Settings().tabItem{
-                                Label("Settings",systemImage: "gear")
-                                
-                                }
+//                            StockView().tabItem{
+//                                Label("Stock Graphs",systemImage: "chart.pie")
+//                            }
+                         
                             stockSearchView()
                                 .tabItem{
                                     Label("Search", systemImage: "magnifyingglass")
@@ -91,6 +88,10 @@ struct HomePage: View {
                             NewsSearchView()
                                 .tabItem {
                                     Label("Search News", systemImage: "mail.and.text.magnifyingglass")
+                                }
+                            Settings().tabItem{
+                                Label("Settings",systemImage: "gear")
+                                
                                 }
                         }
 

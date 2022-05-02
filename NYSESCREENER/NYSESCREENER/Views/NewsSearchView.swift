@@ -17,7 +17,10 @@ struct NewsSearchView: View {
         NavigationView {
             VStack{
 //                Text("Searched News Results")
+                HStack{
+                Image(systemName: "magnifyingglass")
                 TextField("Enter ticker symbol", text: $searchText)
+                }
                 Button{
                     Task{
                         await newsViewModel.refresh(ticker: searchText)
@@ -37,7 +40,7 @@ struct NewsSearchView: View {
                         .progressViewStyle(CircularProgressViewStyle(tint: .accentColor))
                 }
             }
-            .navigationTitle("Search Results")
+            .navigationTitle("Search Results").padding()
         }
         //        .task {
         //            await newsViewModel.refresh(ticker: "aapl")

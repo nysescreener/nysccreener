@@ -10,7 +10,9 @@ struct StockListView: View {
     
     var body: some View {
         VStack{
-            Text("WatchList Stocks")
+            HStack{
+                Text("WatchList Stocks")
+            Spacer()
             Button{
                 Task{
                     let searchText = tickers.joined(separator: ",")
@@ -19,31 +21,8 @@ struct StockListView: View {
             } label: {
                 Text("Refresh")
             }
-            
-            List(topGainersViewModel.moversData, id: \.self) { item in
-                HStack{
-                    Text(item.symbol)
-                    Spacer()
-                    Text("Change : ")
-                    Spacer()
-                    Text("\(String(item.changesPercentage))%" )
-                        .foregroundColor(Color.green)
-                }
-            }
-            List(topLosersViewModel.moversData, id: \.self) { item in
-                HStack{
-                    Text(item.symbol)
-                    Spacer()
-                    Text("Change : ")
-                    Spacer()
-                    Text("\(String(item.changesPercentage))%" )
-                        .foregroundColor(Color.red)
-                }
-            }
-            
-            
+            }.padding()
             NavigationView{
-                
                 List(stockListViewModel.stockData, id: \.self){ item in
       
                     NavigationLink(destination: StockDetailView(tckr:item.ticker!)){
@@ -58,6 +37,37 @@ struct StockListView: View {
                 .animation(.default, value: stockListViewModel.stockData)
                 
             }
+            HStack{
+                VStack{
+                    Text("TOP GAINERS")
+            List(topGainersViewModel.moversData, id: \.self) { item in
+                HStack{
+                    Text(item.symbol).font(.system(size:10))
+                    Spacer()
+//                    Text("Change : ").font(.system(size:10))
+                    Spacer()
+                    Text(": \(String(item.changesPercentage))%" )
+                        .foregroundColor(Color.green).font(.system(size:10))
+                }
+            }
+                }
+                VStack{
+                    Text("TOP LOSERS")
+            List(topLosersViewModel.moversData, id: \.self) { item in
+                HStack{
+                    Text(item.symbol).font(.system(size:10))
+                    Spacer()
+//                    Text("Change : ").font(.system(size:6))
+                    Spacer()
+                    Text(": \(String(item.changesPercentage))%" )
+                        .foregroundColor(Color.red).font(.system(size:10))
+                }
+            }
+                }
+            }
+            
+            
+            Spacer()
         }
         
         .overlay{

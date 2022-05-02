@@ -15,7 +15,10 @@ struct stockSearchView: View {
     
     var body: some View {
         VStack{
+            HStack{
+            Image(systemName: "magnifyingglass")
             TextField("Enter Search term", text: $searchString)
+            }
             Button{
                 Task{
                     await stockSearchViewModel.refresh(ticker: searchString)
@@ -36,7 +39,7 @@ struct stockSearchView: View {
                 }
                 .animation(.default, value: stockSearchViewModel.stockData)
             }
-        }
+        }.padding()
     }
 }
 
