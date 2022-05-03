@@ -11,7 +11,7 @@ import SwiftUI
 struct HomePage: View {
 
     @State var shouldShowLogOutOptions = false
-    
+//    @StateObject var isRecoverPassword = false
     @ObservedObject private var vm = Mainview()
     
     private var customNavBar: some View {
@@ -22,15 +22,6 @@ struct HomePage: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("\(vm.Email)")
                         .font(.system(size: 14, weight: .bold))
-
-//                    HStack {
-//                        Circle()
-//                            .foregroundColor(.green)
-//                            .frame(width: 8, height: 14)
-//                        Text("online")
-//                            .font(.system(size: 8))
-//                            .foregroundColor(Color(.lightGray))
-//                    }
 
                 }
                 Spacer()
@@ -56,6 +47,7 @@ struct HomePage: View {
                     self.vm.isUserCurrentlyLoggedOut = false
                     self.vm.fetchCurrentuser()
                 })
+//                .environmentObject(isRecoverPassword)
             }
         
         }
@@ -63,16 +55,12 @@ struct HomePage: View {
     
     var body: some View {
         NavigationView {
-            VStack{
+            VStack(alignment: .leading){
                 customNavBar
                         TabView{
                             StockListView().tabItem{
                                 Label("Stocks", systemImage: "chart.xyaxis.line")
                             }
-        
-//                            StockView().tabItem{
-//                                Label("Stock Graphs",systemImage: "chart.pie")
-//                            }
                          
                             stockSearchView()
                                 .tabItem{
@@ -85,17 +73,14 @@ struct HomePage: View {
                                     Label("Top News", systemImage: "newspaper.fill")
                                 }
                             
-                            NewsSearchView()
-                                .tabItem {
-                                    Label("Search News", systemImage: "mail.and.text.magnifyingglass")
-                                }
                             Settings().tabItem{
                                 Label("Settings",systemImage: "gear")
                                 
                                 }
                         }
 
-                    }.navigationTitle("NYSCSCREENER")
+                    }
+            .navigationTitle("NYSCSCREENER").navigationBarTitleDisplayMode(.inline)
 
         }
             }
@@ -105,6 +90,13 @@ struct HomePage: View {
 
 struct HomePage_Previews: PreviewProvider {
     static var previews: some View {
-        HomePage()
+        Group {
+            HomePage()
+            HomePage()
+            HomePage()
+            HomePage()
+            HomePage()
+        }
+            
     }
 }

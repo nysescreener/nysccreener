@@ -9,7 +9,8 @@ struct StockListView: View {
     @State var tickers = ["aapl", "twtr", "msft", "tsla","goog","s","f", "rivn","fsr"]
     
     var body: some View {
-        VStack{
+        NavigationView{
+        VStack(alignment: .leading){
             HStack{
                 Text("WatchList Stocks")
             Spacer()
@@ -22,21 +23,24 @@ struct StockListView: View {
                 Text("Refresh")
             }
             }.padding()
-            NavigationView{
+//            NavigationView{
                 List(stockListViewModel.stockData, id: \.self){ item in
-      
-                    NavigationLink(destination: StockDetailView(tckr:item.ticker!)){
+                    NavigationLink{
+                        StockDetailView(tckr:item.ticker!)
+
+                    }label: {
                         HStack{
                             Text(String(item.ticker ?? "Nan"))
                             Spacer()
                             Text("$"+String(item.tngoLast ?? 0.0))
                             Spacer()
-                        }}
+                        }
+                    }
                     
                 }
                 .animation(.default, value: stockListViewModel.stockData)
                 
-            }
+//            }
             HStack{
                 VStack{
                     Text("TOP GAINERS")
@@ -67,7 +71,7 @@ struct StockListView: View {
             }
             
             
-            Spacer()
+//            Spacer()
         }
         
         .overlay{
@@ -93,8 +97,9 @@ struct StockListView: View {
         }
         
         
-    }
+        }
     
+    }
 }
 
 struct StockListView_Previews: PreviewProvider {
@@ -102,4 +107,6 @@ struct StockListView_Previews: PreviewProvider {
         StockListView().preferredColorScheme(.dark)
     }
 }
+
+
 

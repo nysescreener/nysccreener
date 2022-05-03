@@ -18,6 +18,8 @@
 		F150C8542805550B00F4C82B /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F150C8532805550B00F4C82B /* FirebaseManager.swift */; };
 		F150C85628055A4700F4C82B /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F150C85528055A4700F4C82B /* HomeVM.swift */; };
 		F15184CE28208F4800008765 /* emailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15184CD28208F4700008765 /* emailModel.swift */; };
+		F15184D02820A3D800008765 /* ForgetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15184CF2820A3D800008765 /* ForgetPassword.swift */; };
+		F15184D62820D5E200008765 /* DeleteVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15184D52820D5E200008765 /* DeleteVM.swift */; };
 		F17AB2E428052A2700AD34B1 /* NYSESCREENERApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17AB2E328052A2700AD34B1 /* NYSESCREENERApp.swift */; };
 		F17AB2E628052A2700AD34B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17AB2E528052A2700AD34B1 /* ContentView.swift */; };
 		F17AB2E828052A2900AD34B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F17AB2E728052A2900AD34B1 /* Assets.xcassets */; };
@@ -79,6 +81,8 @@
 		F150C8532805550B00F4C82B /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		F150C85528055A4700F4C82B /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		F15184CD28208F4700008765 /* emailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emailModel.swift; sourceTree = "<group>"; };
+		F15184CF2820A3D800008765 /* ForgetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassword.swift; sourceTree = "<group>"; };
+		F15184D52820D5E200008765 /* DeleteVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteVM.swift; sourceTree = "<group>"; };
 		F17AB2E028052A2700AD34B1 /* NYSESCREENER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYSESCREENER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F17AB2E328052A2700AD34B1 /* NYSESCREENERApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYSESCREENERApp.swift; sourceTree = "<group>"; };
 		F17AB2E528052A2700AD34B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 				F1AC0D152820614E002C845C /* newsSearchVM.swift */,
 				F1AC0D17282061CF002C845C /* stockSearchVM.swift */,
 				F1AC0D19282061FA002C845C /* topMoversVM.swift */,
+				F15184D52820D5E200008765 /* DeleteVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 				F1AC0D0F28204E16002C845C /* MainView.swift */,
 				F1AC0D11282060CE002C845C /* StockSearchiew.swift */,
 				F1AC0D132820610A002C845C /* topNewsView.swift */,
+				F15184CF2820A3D800008765 /* ForgetPassword.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -398,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F15184D62820D5E200008765 /* DeleteVM.swift in Sources */,
 				F1AC0D142820610A002C845C /* topNewsView.swift in Sources */,
 				F1AC0D03281F5C6D002C845C /* stockListModel.swift in Sources */,
 				F17AB2E628052A2700AD34B1 /* ContentView.swift in Sources */,
@@ -407,6 +414,7 @@
 				F1AC0D1A282061FA002C845C /* topMoversVM.swift in Sources */,
 				F1AC0CFF281F5C25002C845C /* newsModel.swift in Sources */,
 				F1AC0D1C28206247002C845C /* stockSearchModel.swift in Sources */,
+				F15184D02820A3D800008765 /* ForgetPassword.swift in Sources */,
 				F1AC0D12282060CE002C845C /* StockSearchiew.swift in Sources */,
 				F1AC0CFD281F5BC3002C845C /* newsVM.swift in Sources */,
 				F1AC0D08281F7D35002C845C /* StockDetailView.swift in Sources */,

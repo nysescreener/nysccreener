@@ -16,7 +16,7 @@ struct Settings: View {
         VStack(alignment: .leading, spacing: nil){
             NavigationView{
                 VStack(alignment: .leading, spacing: nil){
-                    VStack{
+                    VStack(alignment: .leading){
                         
                         NavigationLink{
                             UpdateProfile(firstname: $m.first, lastname:$m.last, phonenumber: $m.phone, email: $m.Email)
@@ -34,7 +34,7 @@ struct Settings: View {
                                
                             }
                             Button("Cancle", role: .cancel){}
-                        }
+                        }.padding()
                         ///
                         Button{
                         let email = EmailData(recipient: "georgekj1998@gmail.com", subject: "WatchList", messageHeader: "Here is my watchlist", body: tickers.joined(separator: ","))
@@ -42,38 +42,50 @@ struct Settings: View {
 
                                     } label:{
                                         Text("Share Watchlist")
-                                    }
+                                    }.padding()
+                        ///
+                        Button{
+                            
+                        }label: {
+                            Text("FeedBack")
+                        }.padding()
                         
+                        ZStack{
+                        Button{
+                            
+                        }label: {
+                            Text("Review App")
+                        }.padding()
                         
+                        }
                         
                     }
                     Spacer()
                     
-                }
+                }.padding(.trailing,235)
                 
             }
         }
     }
     
-    func deleteaccount() {
-        let user = FirebaseManager.shared.auth.currentUser
-        
-//        let uid = FirebaseManager.shared.auth.currentUser?.uid
-        user?.delete{ error in
-            if error != nil {
-              // An error happened.
-            } else {
-              print("deleted")
-                exit(0)
-            }
-          }
-//        print(uid as Any)
-        
-    }
+
 }
 
 struct Settings_Previews: PreviewProvider {
     static var previews: some View {
         Settings()
+    }
+}
+
+struct Feedback : View{
+    var body: some View{
+        VStack{
+            HStack{
+                Text("Please Rate The Quality of the product").fontWeight(.bold).foregroundColor(.white)
+                Spacer()
+                
+            }.padding().background(Color.white).cornerRadius(10)
+            
+        }
     }
 }

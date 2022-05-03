@@ -12,6 +12,12 @@ struct topNewsView: View {
     var body: some View {
         NavigationView {
             VStack{
+                NavigationLink{
+                    NewsSearchView()
+                    
+                }label: {
+                    Text("Search").padding(.leading,300)
+                }
                 List(newsViewModel.newsData, id: \.self){ item in
                     Link(item.title, destination: URL(string: item.url)!)
                 }
