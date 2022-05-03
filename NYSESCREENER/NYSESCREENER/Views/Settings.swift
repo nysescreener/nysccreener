@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct Settings: View {
+    
     @Environment(\.openURL) var openURL
     @State var tickers = ["aapl", "twtr", "msft", "tsla","goog","s","f", "rivn","fsr"]
     @ObservedObject var m = Mainview()
     @State private var showingAlert2 = false
+    @State var show = false
+    @State var ratings = 0
+    @State var newsletter = false
+    
+    
     var body: some View {
+        ZStack{
+
         VStack(alignment: .leading, spacing: nil){
             NavigationView{
                 VStack(alignment: .leading, spacing: nil){
@@ -44,20 +52,33 @@ struct Settings: View {
                                         Text("Share Watchlist")
                                     }.padding()
                         ///
-                        Button{
-                            
+//                        Button{
+//
+//                        }label: {
+//                            Text("FeedBack")
+//                        }.padding()
+//
+                        NavigationLink{
+                            FeedbackForm()
                         }label: {
                             Text("FeedBack")
                         }.padding()
                         
-                        ZStack{
+
                         Button{
-                            
+                            self.ratings = 0
+                            self.show.toggle()
+                           
                         }label: {
                             Text("Review App")
                         }.padding()
                         
-                        }
+                        HStack{
+                            Text("News Letter")
+                            Toggle("", isOn: $newsletter)
+                        }.padding()
+
+                        
                         
                     }
                     Spacer()
@@ -65,6 +86,19 @@ struct Settings: View {
                 }.padding(.trailing,235)
                 
             }
+        }
+            if self.show{
+                
+                GeometryReader{_ in
+                    
+                    VStack{
+                        
+                        FeedBack(ratings: self.$ratings, show: self.$show).padding()
+                    }
+                    
+                }.background(Color.black.opacity(0.2).edgesIgnoringSafeArea(.all))
+            }
+
         }
     }
     
@@ -77,15 +111,4 @@ struct Settings_Previews: PreviewProvider {
     }
 }
 
-struct Feedback : View{
-    var body: some View{
-        VStack{
-            HStack{
-                Text("Please Rate The Quality of the product").fontWeight(.bold).foregroundColor(.white)
-                Spacer()
-                
-            }.padding().background(Color.white).cornerRadius(10)
-            
-        }
-    }
-}
+

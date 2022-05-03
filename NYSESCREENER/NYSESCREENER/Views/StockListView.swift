@@ -71,7 +71,7 @@ struct StockListView: View {
             }
             
             
-//            Spacer()
+            Spacer()
         }
         
         .overlay{

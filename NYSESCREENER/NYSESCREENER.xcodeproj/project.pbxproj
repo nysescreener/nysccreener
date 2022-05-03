@@ -50,6 +50,8 @@
 		F1AC0D1A282061FA002C845C /* topMoversVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC0D19282061FA002C845C /* topMoversVM.swift */; };
 		F1AC0D1C28206247002C845C /* stockSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC0D1B28206247002C845C /* stockSearchModel.swift */; };
 		F1AC0D1E28206266002C845C /* topMoverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC0D1D28206266002C845C /* topMoverModel.swift */; };
+		F1EE62262820E44E0054E17F /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EE62252820E44E0054E17F /* FeedbackView.swift */; };
+		F1EE622A2820F5BC0054E17F /* FeedbackForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EE62292820F5BB0054E17F /* FeedbackForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,8 @@
 		F1AC0D19282061FA002C845C /* topMoversVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topMoversVM.swift; sourceTree = "<group>"; };
 		F1AC0D1B28206247002C845C /* stockSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stockSearchModel.swift; sourceTree = "<group>"; };
 		F1AC0D1D28206266002C845C /* topMoverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topMoverModel.swift; sourceTree = "<group>"; };
+		F1EE62252820E44E0054E17F /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
+		F1EE62292820F5BB0054E17F /* FeedbackForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +254,8 @@
 				F1AC0D11282060CE002C845C /* StockSearchiew.swift */,
 				F1AC0D132820610A002C845C /* topNewsView.swift */,
 				F15184CF2820A3D800008765 /* ForgetPassword.swift */,
+				F1EE62252820E44E0054E17F /* FeedbackView.swift */,
+				F1EE62292820F5BB0054E17F /* FeedbackForm.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -412,6 +418,7 @@
 				F17AB31328052B7500AD34B1 /* LoginPage.swift in Sources */,
 				F14DD6A72817DAF800E422DD /* StockViewModel.swift in Sources */,
 				F1AC0D1A282061FA002C845C /* topMoversVM.swift in Sources */,
+				F1EE622A2820F5BC0054E17F /* FeedbackForm.swift in Sources */,
 				F1AC0CFF281F5C25002C845C /* newsModel.swift in Sources */,
 				F1AC0D1C28206247002C845C /* stockSearchModel.swift in Sources */,
 				F15184D02820A3D800008765 /* ForgetPassword.swift in Sources */,
@@ -424,6 +431,7 @@
 				F150C85628055A4700F4C82B /* HomeVM.swift in Sources */,
 				F14DD6A02817D5BF00E422DD /* User.swift in Sources */,
 				F14DD69B2817CD2900E422DD /* Settings.swift in Sources */,
+				F1EE62262820E44E0054E17F /* FeedbackView.swift in Sources */,
 				F1AC0D18282061CF002C845C /* stockSearchVM.swift in Sources */,
 				F1AC0D1E28206266002C845C /* topMoverModel.swift in Sources */,
 				F17AB2E428052A2700AD34B1 /* NYSESCREENERApp.swift in Sources */,

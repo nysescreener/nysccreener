@@ -39,6 +39,7 @@ struct HomePage: View {
                     .destructive(Text("Sign Out"), action: {
                         print("handle sign out")
                         vm.handlesignout()
+//                        HomePage()
                     }),
                         .cancel()
                 ])
