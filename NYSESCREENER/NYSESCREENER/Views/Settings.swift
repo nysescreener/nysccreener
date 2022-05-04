@@ -61,7 +61,7 @@ struct Settings: View {
                         NavigationLink{
                             FeedbackForm()
                         }label: {
-                            Text("FeedBack")
+                            Text("Contact Us")
                         }.padding()
                         
 
@@ -75,7 +75,11 @@ struct Settings: View {
                         
                         HStack{
                             Text("News Letter")
-                            Toggle("", isOn: $newsletter)
+                            Toggle("", isOn: $newsletter).onChange(of:newsletter){newValue in
+                                
+                                updatenewsletter(toggle: newValue)
+                            }
+                            
                         }.padding()
 
                         
@@ -111,4 +115,17 @@ struct Settings_Previews: PreviewProvider {
     }
 }
 
+func updatenewsletter(toggle : Bool){
+    guard let uid = FirebaseManager.shared.auth.currentUser?.uid else{return}
+    let userData = ["NewsLetter": toggle ]
+    FirebaseManager.shared.firestore.collection("users").document(uid).updateData(userData) { err in
+        if let err = err {
+            print(err)
+            return
+        }
+        
+        print("success")
+    }
+    
+}
 

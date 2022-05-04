@@ -16,7 +16,7 @@ struct FeedbackForm: View {
               TextEditor(text: $profileText)
                   .foregroundColor(.secondary)
                   .padding(.horizontal)
-                  .navigationTitle("Feedback").border(.gray)
+                  .navigationTitle("Contact Us").border(.gray)
             
             Button{
                 let uuid = UUID().uuidString
