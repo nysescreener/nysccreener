@@ -39,6 +39,10 @@
 		F17C6972282221F300B39817 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17C6971282221F300B39817 /* Launch Screen.storyboard */; };
 		F17C69742822299100B39817 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17C69732822299100B39817 /* ChartView.swift */; };
 		F17C6976282229D300B39817 /* chartPriceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17C6975282229D300B39817 /* chartPriceVM.swift */; };
+		F17C69782822472B00B39817 /* advStatsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17C69772822472B00B39817 /* advStatsVM.swift */; };
+		F17C697A2822476700B39817 /* advStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17C69792822476700B39817 /* advStatsModel.swift */; };
+		F17C697C2822479400B39817 /* advStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17C697B2822479400B39817 /* advStatsView.swift */; };
+		F17C697E28225E8500B39817 /* movingAverageChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17C697D28225E8500B39817 /* movingAverageChartView.swift */; };
 		F1AC0CF5281F1ACF002C845C /* UpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC0CF4281F1ACF002C845C /* UpdateProfile.swift */; };
 		F1AC0CFB281F5B91002C845C /* NewsSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC0CFA281F5B91002C845C /* NewsSearchView.swift */; };
 		F1AC0CFD281F5BC3002C845C /* newsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC0CFC281F5BC3002C845C /* newsVM.swift */; };
@@ -109,6 +113,10 @@
 		F17C6971282221F300B39817 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F17C69732822299100B39817 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		F17C6975282229D300B39817 /* chartPriceVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chartPriceVM.swift; sourceTree = "<group>"; };
+		F17C69772822472B00B39817 /* advStatsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advStatsVM.swift; sourceTree = "<group>"; };
+		F17C69792822476700B39817 /* advStatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advStatsModel.swift; sourceTree = "<group>"; };
+		F17C697B2822479400B39817 /* advStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advStatsView.swift; sourceTree = "<group>"; };
+		F17C697D28225E8500B39817 /* movingAverageChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movingAverageChartView.swift; sourceTree = "<group>"; };
 		F1AC0CF4281F1ACF002C845C /* UpdateProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfile.swift; sourceTree = "<group>"; };
 		F1AC0CFA281F5B91002C845C /* NewsSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSearchView.swift; sourceTree = "<group>"; };
 		F1AC0CFC281F5BC3002C845C /* newsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsVM.swift; sourceTree = "<group>"; };
@@ -170,6 +178,7 @@
 				F1AC0D1B28206247002C845C /* stockSearchModel.swift */,
 				F1AC0D1D28206266002C845C /* topMoverModel.swift */,
 				F15184CD28208F4700008765 /* emailModel.swift */,
+				F17C69792822476700B39817 /* advStatsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,6 +197,7 @@
 				F15184D52820D5E200008765 /* DeleteVM.swift */,
 				F17C69662821E46C00B39817 /* watchListVM.swift */,
 				F17C6975282229D300B39817 /* chartPriceVM.swift */,
+				F17C69772822472B00B39817 /* advStatsVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -273,6 +283,8 @@
 				F1EE62292820F5BB0054E17F /* FeedbackForm.swift */,
 				F17C696F28220FB500B39817 /* flowBarEditView.swift */,
 				F17C69732822299100B39817 /* ChartView.swift */,
+				F17C697B2822479400B39817 /* advStatsView.swift */,
+				F17C697D28225E8500B39817 /* movingAverageChartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -440,15 +452,18 @@
 				F17C69672821E46C00B39817 /* watchListVM.swift in Sources */,
 				F14DD6A72817DAF800E422DD /* StockViewModel.swift in Sources */,
 				F1AC0D1A282061FA002C845C /* topMoversVM.swift in Sources */,
+				F17C697A2822476700B39817 /* advStatsModel.swift in Sources */,
 				F1EE622A2820F5BC0054E17F /* FeedbackForm.swift in Sources */,
 				F1AC0CFF281F5C25002C845C /* newsModel.swift in Sources */,
 				F1AC0D1C28206247002C845C /* stockSearchModel.swift in Sources */,
 				F15184D02820A3D800008765 /* ForgetPassword.swift in Sources */,
 				F1AC0D12282060CE002C845C /* StockSearchiew.swift in Sources */,
+				F17C697E28225E8500B39817 /* movingAverageChartView.swift in Sources */,
 				F1AC0CFD281F5BC3002C845C /* newsVM.swift in Sources */,
 				F1AC0D08281F7D35002C845C /* StockDetailView.swift in Sources */,
 				F1AC0D0A281F7D62002C845C /* StockDetailVM.swift in Sources */,
 				F150C8542805550B00F4C82B /* FirebaseManager.swift in Sources */,
+				F17C697C2822479400B39817 /* advStatsView.swift in Sources */,
 				F1AC0D01281F5C3D002C845C /* stockModel.swift in Sources */,
 				F150C85628055A4700F4C82B /* HomeVM.swift in Sources */,
 				F14DD6A02817D5BF00E422DD /* User.swift in Sources */,
@@ -462,6 +477,7 @@
 				F17C69742822299100B39817 /* ChartView.swift in Sources */,
 				F14DD6A92818EB4500E422DD /* APIManager.swift in Sources */,
 				F15184CE28208F4800008765 /* emailModel.swift in Sources */,
+				F17C69782822472B00B39817 /* advStatsVM.swift in Sources */,
 				F14DD6A52817DADD00E422DD /* StockListVM.swift in Sources */,
 				F1AC0D1028204E16002C845C /* MainView.swift in Sources */,
 				F1AC0CFB281F5B91002C845C /* NewsSearchView.swift in Sources */,

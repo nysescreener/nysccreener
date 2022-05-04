@@ -57,12 +57,12 @@ struct Settings: View {
 //                        }label: {
 //                            Text("FeedBack")
 //                        }.padding()
-                        
-                        NavigationLink{
-                            flowBarEditView()
-                        }label: {
-                            Text("Edit Flow Bar")
-                        }.padding()
+//                        
+//                        NavigationLink{
+//                            flowBarEditView()
+//                        }label: {
+//                            Text("Edit Flow Bar")
+//                        }.padding()
 //
                         NavigationLink{
                             FeedbackForm()

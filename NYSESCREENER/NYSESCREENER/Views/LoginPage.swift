@@ -47,7 +47,7 @@ struct LoginPage: View {
                         Group{
                             TextField("First Name", text: $firstname)
                             TextField("Last Name", text: $lastname)
-                            TextField("Phone Number", text: $phonenumber)
+                            TextField("Phone Number", text: $phonenumber).keyboardType(.numberPad)
                             
                         }.padding(12)  .overlay(
                             RoundedRectangle(cornerRadius: 16)

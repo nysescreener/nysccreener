@@ -10,6 +10,7 @@ import FirebaseFirestore
 struct StockDetailView: View {
     @State var tckr: String
     @StateObject var stockDetailViewModel = stockDetailVM()
+    @StateObject var advStatsViewModel = advStatsVM()
     @ObservedObject var vm = Mainview()
     
     var body: some View {
@@ -39,10 +40,10 @@ struct StockDetailView: View {
             }
                 
                 
-            }
+            }.padding(.top,-50)
             VStack{
                 chartView(ticker: $tckr)
-            }.padding()
+            }
             
             List(stockDetailViewModel.stockData, id: \.self){ item in
                 VStack(alignment: .leading, spacing: nil){
@@ -78,7 +79,18 @@ struct StockDetailView: View {
                         Spacer()
                     }
                 }
+ 
+
+            }
+            Spacer()
+//            VStack{
+                NavigationLink{
+                    advStatsView(ticker: tckr)
+                }label: {
+                    Text("Advance Stats")
                 }
+//            }
+            
             VStack{
                     HStack{
                         HStack{
@@ -99,6 +111,8 @@ struct StockDetailView: View {
             
             
                 }
+            
+          
                 
                 
             }
@@ -118,26 +132,6 @@ struct StockDetailView: View {
     }
 }
 
-//func addwatchlist(watchlist : String){
-//
-//    guard let uid = FirebaseManager.shared.auth.currentUser?.uid else{return}
-////    print(watchlist)
-//
-//
-//    var watch :[String] = watch.append(watchlist)
-//    print(watch)
-//
-//    let userData1 = ["whatchlist" : ["hello1","hel","hi","hello12134"]]
-//
-//    FirebaseManager.shared.firestore.collection("users").document(uid).updateData(userData1) { err in
-//        if let err = err {
-//            print(err)
-////            self.Loginstatus1 = "Failed to Update"
-//            return
-//        }
-//    }
-//
-//}
 
 func addwatchlist(tcker : String){
        var db = Firestore.firestore()
