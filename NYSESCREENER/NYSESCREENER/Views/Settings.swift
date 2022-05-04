@@ -51,19 +51,7 @@ struct Settings: View {
                                     } label:{
                                         Text("Share Watchlist")
                                     }.padding()
-                        ///
-//                        Button{
-//
-//                        }label: {
-//                            Text("FeedBack")
-//                        }.padding()
-//                        
-//                        NavigationLink{
-//                            flowBarEditView()
-//                        }label: {
-//                            Text("Edit Flow Bar")
-//                        }.padding()
-//
+
                         NavigationLink{
                             FeedbackForm()
                         }label: {
@@ -87,13 +75,14 @@ struct Settings: View {
                             }
                             
                         }.padding()
-
+                        
+                        Text("API : https://dry-crag-17442.herokuapp.com/search?name=aapl").padding()
                         
                         
                     }
                     Spacer()
                     
-                }.padding(.trailing,235)
+                }
                 
             }
         }

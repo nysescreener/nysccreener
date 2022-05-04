@@ -25,12 +25,12 @@ struct StockDetailView: View {
                 Button{
                     addwatchlist(tcker: tckr)
                 }label: {
-                    Text("+")
+                    Text("+").shadow(color: Color.blue, radius: 20, y: 5).frame(width: 15.0, height: 32.0)
                 }
                 Button{
                     removewatchlist(tcker: tckr)
                 }label:{
-                    Text("-")
+                    Text("-").shadow(color: Color.blue, radius: 20, y: 5).frame(width: 15.0, height: 32.0)
                 }.padding()
                     }
                     
@@ -44,7 +44,7 @@ struct StockDetailView: View {
             VStack{
                 chartView(ticker: $tckr)
             }
-            
+            VStack{
             List(stockDetailViewModel.stockData, id: \.self){ item in
                 VStack(alignment: .leading, spacing: nil){
                     HStack{
@@ -82,15 +82,21 @@ struct StockDetailView: View {
  
 
             }
+            }
             Spacer()
-//            VStack{
+            HStack{
                 NavigationLink{
                     advStatsView(ticker: tckr)
                 }label: {
                     Text("Advance Stats")
                 }
-//            }
-            
+Spacer()
+            NavigationLink{
+                BarGrapView(ticker: $tckr)
+            }label: {
+                Text("Bar Graph")
+            }
+            }
             VStack{
                     HStack{
                         HStack{

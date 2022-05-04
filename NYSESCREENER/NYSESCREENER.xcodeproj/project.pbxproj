@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1380DE42822862100C4A6B2 /* BarGraphview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1380DE32822862100C4A6B2 /* BarGraphview.swift */; };
 		F14DD69B2817CD2900E422DD /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14DD69A2817CD2900E422DD /* Settings.swift */; };
 		F14DD69D2817CDC600E422DD /* StockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14DD69C2817CDC600E422DD /* StockView.swift */; };
 		F14DD6A02817D5BF00E422DD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14DD69F2817D5BF00E422DD /* User.swift */; };
@@ -82,6 +83,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F1380DE32822862100C4A6B2 /* BarGraphview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGraphview.swift; sourceTree = "<group>"; };
 		F14DD69A2817CD2900E422DD /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F14DD69C2817CDC600E422DD /* StockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockView.swift; sourceTree = "<group>"; };
 		F14DD69F2817D5BF00E422DD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				F17C69732822299100B39817 /* ChartView.swift */,
 				F17C697B2822479400B39817 /* advStatsView.swift */,
 				F17C697D28225E8500B39817 /* movingAverageChartView.swift */,
+				F1380DE32822862100C4A6B2 /* BarGraphview.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				F1AC0CFF281F5C25002C845C /* newsModel.swift in Sources */,
 				F1AC0D1C28206247002C845C /* stockSearchModel.swift in Sources */,
 				F15184D02820A3D800008765 /* ForgetPassword.swift in Sources */,
+				F1380DE42822862100C4A6B2 /* BarGraphview.swift in Sources */,
 				F1AC0D12282060CE002C845C /* StockSearchiew.swift in Sources */,
 				F17C697E28225E8500B39817 /* movingAverageChartView.swift in Sources */,
 				F1AC0CFD281F5BC3002C845C /* newsVM.swift in Sources */,

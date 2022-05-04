@@ -16,6 +16,12 @@ class NYSESCREENERUITestsLaunchTests: XCTestCase {
     override func setUpWithError() throws {
         continueAfterFailure = false
     }
+    
+    func test_NYSEScreenerLoginView_LoginButton_should_Login() {
+        
+     
+            
+    }
 
     func testLaunch() throws {
         let app = XCUIApplication()
