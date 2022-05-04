@@ -37,6 +37,8 @@
 		F17C69672821E46C00B39817 /* watchListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17C69662821E46C00B39817 /* watchListVM.swift */; };
 		F17C697028220FB500B39817 /* flowBarEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17C696F28220FB500B39817 /* flowBarEditView.swift */; };
 		F17C6972282221F300B39817 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17C6971282221F300B39817 /* Launch Screen.storyboard */; };
+		F17C69742822299100B39817 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17C69732822299100B39817 /* ChartView.swift */; };
+		F17C6976282229D300B39817 /* chartPriceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17C6975282229D300B39817 /* chartPriceVM.swift */; };
 		F1AC0CF5281F1ACF002C845C /* UpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC0CF4281F1ACF002C845C /* UpdateProfile.swift */; };
 		F1AC0CFB281F5B91002C845C /* NewsSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC0CFA281F5B91002C845C /* NewsSearchView.swift */; };
 		F1AC0CFD281F5BC3002C845C /* newsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC0CFC281F5BC3002C845C /* newsVM.swift */; };
@@ -105,6 +107,8 @@
 		F17C69662821E46C00B39817 /* watchListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchListVM.swift; sourceTree = "<group>"; };
 		F17C696F28220FB500B39817 /* flowBarEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowBarEditView.swift; sourceTree = "<group>"; };
 		F17C6971282221F300B39817 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F17C69732822299100B39817 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		F17C6975282229D300B39817 /* chartPriceVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chartPriceVM.swift; sourceTree = "<group>"; };
 		F1AC0CF4281F1ACF002C845C /* UpdateProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfile.swift; sourceTree = "<group>"; };
 		F1AC0CFA281F5B91002C845C /* NewsSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSearchView.swift; sourceTree = "<group>"; };
 		F1AC0CFC281F5BC3002C845C /* newsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsVM.swift; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 				F1AC0D19282061FA002C845C /* topMoversVM.swift */,
 				F15184D52820D5E200008765 /* DeleteVM.swift */,
 				F17C69662821E46C00B39817 /* watchListVM.swift */,
+				F17C6975282229D300B39817 /* chartPriceVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				F1EE62252820E44E0054E17F /* FeedbackView.swift */,
 				F1EE62292820F5BB0054E17F /* FeedbackForm.swift */,
 				F17C696F28220FB500B39817 /* flowBarEditView.swift */,
+				F17C69732822299100B39817 /* ChartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -453,12 +459,14 @@
 				F17AB2E428052A2700AD34B1 /* NYSESCREENERApp.swift in Sources */,
 				F17AB31828053C6A00AD34B1 /* HomePage.swift in Sources */,
 				F14DD6AB2818EC0C00E422DD /* Stock.swift in Sources */,
+				F17C69742822299100B39817 /* ChartView.swift in Sources */,
 				F14DD6A92818EB4500E422DD /* APIManager.swift in Sources */,
 				F15184CE28208F4800008765 /* emailModel.swift in Sources */,
 				F14DD6A52817DADD00E422DD /* StockListVM.swift in Sources */,
 				F1AC0D1028204E16002C845C /* MainView.swift in Sources */,
 				F1AC0CFB281F5B91002C845C /* NewsSearchView.swift in Sources */,
 				F1AC0D162820614E002C845C /* newsSearchVM.swift in Sources */,
+				F17C6976282229D300B39817 /* chartPriceVM.swift in Sources */,
 				F1AC0CF5281F1ACF002C845C /* UpdateProfile.swift in Sources */,
 				F14DD6A22817DA2200E422DD /* StockListView.swift in Sources */,
 			);

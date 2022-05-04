@@ -40,6 +40,9 @@ struct StockDetailView: View {
                 
                 
             }
+            VStack{
+                chartView(ticker: $tckr)
+            }.padding()
             
             List(stockDetailViewModel.stockData, id: \.self){ item in
                 VStack(alignment: .leading, spacing: nil){
