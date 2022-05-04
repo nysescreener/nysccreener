@@ -15,21 +15,32 @@ struct StockDetailView: View {
     var body: some View {
         VStack{
             HStack{
-                Text("\(tckr) Details")
+                Text("\(tckr) Details").padding()
                 Spacer()
+                VStack{
+                HStack{
+                    HStack{
+                    Text("WatchList")
                 Button{
                     addwatchlist(tcker: tckr)
-//                    vm.fe
                 }label: {
                     Text("+")
-                }.padding()
+                }
                 Button{
                     removewatchlist(tcker: tckr)
                 }label:{
                     Text("-")
                 }.padding()
+                    }
+                    
             }.padding()
-        
+                    
+                    
+            }
+                
+                
+            }
+            
             List(stockDetailViewModel.stockData, id: \.self){ item in
                 VStack(alignment: .leading, spacing: nil){
                     HStack{
@@ -65,6 +76,26 @@ struct StockDetailView: View {
                     }
                 }
                 }
+            VStack{
+                    HStack{
+                        HStack{
+                        Text("Add To Flow Bar")
+                    Button{
+                        addflowbar(tcker: tckr)
+                    }label: {
+                        Text("Add")
+                    }
+                    Button{
+                        removeflowbar(tcker: tckr)
+                    }label:{
+                        Text("Remove")
+                    }.padding()
+                        }
+            
+                }.padding()
+            
+            
+                }
                 
                 
             }
@@ -79,6 +110,8 @@ struct StockDetailView: View {
         .task {
             await stockDetailViewModel.refresh(ticker: tckr)
         }
+
+        
     }
 }
 
@@ -116,6 +149,22 @@ func removewatchlist(tcker : String){
     db.collection("users").firestore.collection("users").document(uid).updateData(["watchlist" : FieldValue.arrayRemove([tcker])])
     
 }
+
+func addflowbar(tcker : String){
+       var db = Firestore.firestore()
+        guard let uid = FirebaseManager.shared.auth.currentUser?.uid else{return}
+    db.collection("users").firestore.collection("users").document(uid).updateData(["flowbar" : FieldValue.arrayUnion([tcker])])
+    
+}
+
+func removeflowbar(tcker : String){
+       var db = Firestore.firestore()
+        guard let uid = FirebaseManager.shared.auth.currentUser?.uid else{return}
+    db.collection("users").firestore.collection("users").document(uid).updateData(["flowbar" : FieldValue.arrayRemove([tcker])])
+    
+}
+
+
 
 struct StockDetailView_Previews: PreviewProvider {
     static var previews: some View {

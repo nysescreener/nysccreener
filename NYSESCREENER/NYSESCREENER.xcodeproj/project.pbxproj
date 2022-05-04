@@ -35,6 +35,8 @@
 		F17AB3302805492B00AD34B1 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F17AB32F2805492B00AD34B1 /* FirebaseStorage */; };
 		F17C69652821C4D700B39817 /* Marquee in Frameworks */ = {isa = PBXBuildFile; productRef = F17C69642821C4D700B39817 /* Marquee */; };
 		F17C69672821E46C00B39817 /* watchListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17C69662821E46C00B39817 /* watchListVM.swift */; };
+		F17C697028220FB500B39817 /* flowBarEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17C696F28220FB500B39817 /* flowBarEditView.swift */; };
+		F17C6972282221F300B39817 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17C6971282221F300B39817 /* Launch Screen.storyboard */; };
 		F1AC0CF5281F1ACF002C845C /* UpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC0CF4281F1ACF002C845C /* UpdateProfile.swift */; };
 		F1AC0CFB281F5B91002C845C /* NewsSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC0CFA281F5B91002C845C /* NewsSearchView.swift */; };
 		F1AC0CFD281F5BC3002C845C /* newsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC0CFC281F5BC3002C845C /* newsVM.swift */; };
@@ -101,6 +103,8 @@
 		F17AB31428052CB900AD34B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F17AB31728053C6A00AD34B1 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		F17C69662821E46C00B39817 /* watchListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchListVM.swift; sourceTree = "<group>"; };
+		F17C696F28220FB500B39817 /* flowBarEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowBarEditView.swift; sourceTree = "<group>"; };
+		F17C6971282221F300B39817 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F1AC0CF4281F1ACF002C845C /* UpdateProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfile.swift; sourceTree = "<group>"; };
 		F1AC0CFA281F5B91002C845C /* NewsSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSearchView.swift; sourceTree = "<group>"; };
 		F1AC0CFC281F5BC3002C845C /* newsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsVM.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 		F17AB2D728052A2700AD34B1 = {
 			isa = PBXGroup;
 			children = (
+				F17C6971282221F300B39817 /* Launch Screen.storyboard */,
 				F17AB2E228052A2700AD34B1 /* NYSESCREENER */,
 				F17AB2F328052A2900AD34B1 /* NYSESCREENERTests */,
 				F17AB2FD28052A2900AD34B1 /* NYSESCREENERUITests */,
@@ -261,6 +266,7 @@
 				F15184CF2820A3D800008765 /* ForgetPassword.swift */,
 				F1EE62252820E44E0054E17F /* FeedbackView.swift */,
 				F1EE62292820F5BB0054E17F /* FeedbackForm.swift */,
+				F17C696F28220FB500B39817 /* flowBarEditView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -392,6 +398,7 @@
 			files = (
 				F17AB2EB28052A2900AD34B1 /* Preview Assets.xcassets in Resources */,
 				F17AB2E828052A2900AD34B1 /* Assets.xcassets in Resources */,
+				F17C6972282221F300B39817 /* Launch Screen.storyboard in Resources */,
 				F17AB31528052CB900AD34B1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +426,7 @@
 			files = (
 				F15184D62820D5E200008765 /* DeleteVM.swift in Sources */,
 				F1AC0D142820610A002C845C /* topNewsView.swift in Sources */,
+				F17C697028220FB500B39817 /* flowBarEditView.swift in Sources */,
 				F1AC0D03281F5C6D002C845C /* stockListModel.swift in Sources */,
 				F17AB2E628052A2700AD34B1 /* ContentView.swift in Sources */,
 				F14DD69D2817CDC600E422DD /* StockView.swift in Sources */,

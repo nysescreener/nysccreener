@@ -155,7 +155,7 @@ private func createNewaccount(){
 
 private func  StoreUserInformation(){
     guard let uid = FirebaseManager.shared.auth.currentUser?.uid else{return}
-    let userData = ["email": self.email, "uid": uid ,"FirstName" : self.firstname , "LastName" : self.lastname , "PhoneNumber" : self.phonenumber , "Password" : self.password, "watchlist" :  ["RIVN","AAPL"]] as [String : Any]
+    let userData = ["email": self.email, "uid": uid ,"FirstName" : self.firstname , "LastName" : self.lastname , "PhoneNumber" : self.phonenumber , "Password" : self.password, "watchlist" :  ["RIVN","AAPL"],"flowbar" : ["RIVN","AAPL","GOOG","S","F"]] as [String : Any]
     
     FirebaseManager.shared.firestore.collection("users").document(uid).setData(userData) { err in
         if let err = err {

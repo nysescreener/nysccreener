@@ -8,5 +8,5 @@
 import Foundation
 
 struct Mainuser{
-    let uid, email, first , last , phone : String,watchList : [String]
+    let uid, email, first , last , phone : String,watchList : [String], flowbar : [String]
 }

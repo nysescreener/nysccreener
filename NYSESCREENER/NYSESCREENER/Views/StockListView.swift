@@ -7,11 +7,30 @@ struct StockListView: View {
     @StateObject var topGainersViewModel = topMoversVM()
     @StateObject var topLosersViewModel = topMoversVM()
     @StateObject var IndexListViewModel = stockListVM()
+    @State private var offset: CGFloat = 0
     
     @State var marquee: String = ""
     @State var indexTickers = ["index", "nasdx", "aapl", "msft" ]
     
 //    @State var tickers = ["aapl", "twtr", "msft", "tsla","goog","s","f", "rivn","fsr"]
+    
+//    struct GeometryBackground: View {
+//            var body: some View {
+//                GeometryReader { geometry in
+//                    return Color.clear.preference(key: WidthKey.self, value: geometry.size.width)
+//                }
+//            }
+//        }
+//        struct WidthKey: PreferenceKey {
+//            static var defaultValue = CGFloat(0)
+//            static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+//                value = nextValue()
+//            }
+//            typealias Value = CGFloat
+//        }
+//
+//
+    
     @ObservedObject var vm = Mainview()
     var body: some View {
 //        VStack(alignment: .leading, spacing: nil){
@@ -23,7 +42,7 @@ struct StockListView: View {
                         .font(.system(size: 20))
                         .padding(0)
                 }
-                .marqueeDuration(5)
+                .marqueeDuration(5).padding(.top,-300)
                 HStack{
                     Text("WatchList Stocks")
                     Spacer()
@@ -35,8 +54,9 @@ struct StockListView: View {
                     } label: {
                         Text("Refresh")
                     }
-                }.padding()
+                }.padding(.top,-200).padding()
                 //            NavigationView{
+                
                 List(stockListViewModel.stockData, id: \.self){ item in
                     NavigationLink{
                         StockDetailView(tckr:item.ticker!)
@@ -49,10 +69,9 @@ struct StockListView: View {
                             Spacer()
                         }
                     }
-                    
                 }
-                .animation(.default, value: stockListViewModel.stockData)
-                
+                .animation(.default, value: stockListViewModel.stockData).padding(.top,-150)
+                Spacer()
                 //            }
                 HStack{
                     VStack{
@@ -98,7 +117,7 @@ struct StockListView: View {
                 await stockListViewModel.refresh(ticker: searchText)
                 await topGainersViewModel.refresh(ticker: "gainers")
                 await topLosersViewModel.refresh(ticker: "losers")
-                let indexText = indexTickers.joined(separator: ",")
+                let indexText = vm.flowbar.joined(separator: ",")
                 await IndexListViewModel.refresh(ticker: indexText)
                 retrieveFlowPrices()
                 
@@ -109,7 +128,7 @@ struct StockListView: View {
                 await stockListViewModel.refresh(ticker: searchText)
                 await topGainersViewModel.refresh(ticker: "gainers")
                 await topLosersViewModel.refresh(ticker: "losers")
-                let indexText = indexTickers.joined(separator: ",")
+                let indexText = vm.flowbar.joined(separator: ",")
                 await IndexListViewModel.refresh(ticker: indexText)
                 retrieveFlowPrices()
                 

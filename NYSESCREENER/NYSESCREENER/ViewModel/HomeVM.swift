@@ -15,7 +15,7 @@ class Mainview: ObservableObject{
     @Published var last = ""
     @Published var phone = ""
     @Published var watchList = [String]()
-    
+    @Published var flowbar = [String]()
     init(){
         DispatchQueue.main.async {
             self.isUserCurrentlyLoggedOut = FirebaseManager.shared.auth.currentUser?.uid == nil
@@ -47,13 +47,15 @@ class Mainview: ObservableObject{
             let Phone = data["PhoneNumber"] as? String ?? ""
 //            let watchlist = data["]
             let watchList = data["watchlist"] as? [String] ?? [String]()
+            let flowbar = data["flowbar"] as? [String] ?? [String]()
             
-            let mainuser = Mainuser(uid: uid , email : email, first: First , last: last , phone: Phone, watchList: watchList)
+            let mainuser = Mainuser(uid: uid , email : email, first: First , last: last , phone: Phone, watchList: watchList, flowbar: flowbar)
             self.Email = mainuser.email
             self.first = mainuser.first
             self.last = mainuser.last
             self.phone = mainuser.phone
             self.watchList = mainuser.watchList
+            self.flowbar = mainuser.flowbar
 //            self.errorMessage = mainuser.email
 //            
 //            print(data)
