@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Marquee
 
 
 struct HomePage: View {
@@ -39,7 +40,6 @@ struct HomePage: View {
                     .destructive(Text("Sign Out"), action: {
                         print("handle sign out")
                         vm.handlesignout()
-//                        HomePage()
                     }),
                         .cancel()
                 ])
@@ -56,8 +56,9 @@ struct HomePage: View {
     
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading){
+            VStack(alignment: .leading,spacing: nil){
                 customNavBar
+                
                         TabView{
                             StockListView().tabItem{
                                 Label("Stocks", systemImage: "chart.xyaxis.line")

@@ -6,14 +6,29 @@
 //
 
 import SwiftUI
-
+import FirebaseFirestore
 struct StockDetailView: View {
     @State var tckr: String
     @StateObject var stockDetailViewModel = stockDetailVM()
+    @ObservedObject var vm = Mainview()
     
     var body: some View {
         VStack{
-            Text("\(tckr) Details")
+            HStack{
+                Text("\(tckr) Details")
+                Spacer()
+                Button{
+                    addwatchlist(tcker: tckr)
+//                    vm.fe
+                }label: {
+                    Text("+")
+                }.padding()
+                Button{
+                    removewatchlist(tcker: tckr)
+                }label:{
+                    Text("-")
+                }.padding()
+            }.padding()
         
             List(stockDetailViewModel.stockData, id: \.self){ item in
                 VStack(alignment: .leading, spacing: nil){
@@ -67,8 +82,53 @@ struct StockDetailView: View {
     }
 }
 
+//func addwatchlist(watchlist : String){
+//
+//    guard let uid = FirebaseManager.shared.auth.currentUser?.uid else{return}
+////    print(watchlist)
+//
+//
+//    var watch :[String] = watch.append(watchlist)
+//    print(watch)
+//
+//    let userData1 = ["whatchlist" : ["hello1","hel","hi","hello12134"]]
+//
+//    FirebaseManager.shared.firestore.collection("users").document(uid).updateData(userData1) { err in
+//        if let err = err {
+//            print(err)
+////            self.Loginstatus1 = "Failed to Update"
+//            return
+//        }
+//    }
+//
+//}
+
+func addwatchlist(tcker : String){
+       var db = Firestore.firestore()
+        guard let uid = FirebaseManager.shared.auth.currentUser?.uid else{return}
+    db.collection("users").firestore.collection("users").document(uid).updateData(["watchlist" : FieldValue.arrayUnion([tcker])])
+    
+}
+
+func removewatchlist(tcker : String){
+       var db = Firestore.firestore()
+        guard let uid = FirebaseManager.shared.auth.currentUser?.uid else{return}
+    db.collection("users").firestore.collection("users").document(uid).updateData(["watchlist" : FieldValue.arrayRemove([tcker])])
+    
+}
+
 struct StockDetailView_Previews: PreviewProvider {
     static var previews: some View {
         StockDetailView(tckr: "aapl")
     }
 }
+
+//func fetchWatchList(wat) {
+//    
+////    @Published var watchList = [String]()
+//    var db = Firestore.firestore()
+//    guard let uid = FirebaseManager.shared.auth.currentUser?.uid else{return}
+//
+//    db.collection("users").firestore.collection("users").document(uid).updateData(["watchlist" : FieldValue.arrayUnion(watchList)])
+//}
+

@@ -16,7 +16,8 @@ class topMoversVM : ObservableObject{
     
     public func fetchNewsResults(type: String) async -> [topMoversModel]{
         
-        let url = URL(string:"https://financialmodelingprep.com/api/v3/stock_market/\(type)?apikey=f4d3c493d808c26a4d6f1e6ff87f7be8")
+        let url = URL(string:"https://financialmodelingprep.com/api/v3/stock_market/\(type)")
+        ///string:"https://financialmodelingprep.com/api/v3/stock_market/\(type)?apikey=f4d3c493d808c26a4d6f1e6ff87f7be8"
         
         guard url != nil else {
             print("Error creating url object")
